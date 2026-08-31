@@ -2,31 +2,16 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
 @theme inline {
   --color-neon: #1EF4A8;
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-kanit);
   --font-mono: var(--font-geist-mono);
   --shadow-neon: 0 0 20px #1EF4A8, 0 0 40px rgba(30, 244, 168, 0.4), 0 0 60px rgba(30, 244, 168, 0.2);
-}
-
-:root {
-  --block-top: #e8e8e8;
-  --block-front: #d4d4d4;
-  --block-right: #b8b8b8;
-  --laptop-body: #d0d0d0;
-  --laptop-border: #b0b0b0;
-  --screen-body: #1a1a1a;
-  --screen-bezel: #0d0d0d;
-}
-
-:root.dark {
-  --block-top: #1a1a1a;
-  --block-front: #0a0a0a;
-  --block-right: #080808;
-  --laptop-body: #1a1a1a;
-  --laptop-border: #2a2a2a;
-  --screen-body: #1a1a1a;
-  --screen-bezel: #0d0d0d;
 }
 
 @keyframes slide-in {
@@ -45,6 +30,10 @@
 
 @utility animate-slide-in {
   animation: slide-in 0.25s ease-out;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 * {

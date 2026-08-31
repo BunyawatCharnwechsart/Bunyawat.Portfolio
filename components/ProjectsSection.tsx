@@ -1,5 +1,3 @@
-import Navbar from "@/components/Navbar";
-
 type Project = {
   title: string;
   url?: string;
@@ -22,14 +20,12 @@ const projects: Project[] = [
     desc: "A recipe discovery and meal planning platform built with Vue and TypeScript.",
     tags: ["Vue", "TypeScript", "Express", "Cloudflare D1"],
   },
-
 ];
 
-export default function ProjectsPage() {
+export default function ProjectsSection() {
   return (
-    <div className="bg-white dark:bg-black transition-colors duration-300 min-h-screen">
-      <Navbar />
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 pt-32 pb-20">
+    <section id="projects" className="bg-white dark:bg-black transition-colors duration-300">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
         <h1 className="text-4xl md:text-5xl font-black text-black dark:text-white transition-colors duration-300">
           My <span className="text-neon">Projects</span>
         </h1>
@@ -82,7 +78,7 @@ export default function ProjectsPage() {
             </div>
           ))}
         </div>
-      </main>
-    </div>
+      </div>
+    </section>
   );
 }

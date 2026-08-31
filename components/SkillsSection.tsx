@@ -1,5 +1,3 @@
-import Navbar from "@/components/Navbar";
-
 const skillCategories = [
   {
     title: "Languages",
@@ -15,7 +13,7 @@ const skillCategories = [
   },
   {
     title: "DevOps",
-    items: ["Docker", "CI/CD", "Linux", ],
+    items: ["Docker", "CI/CD", "Linux"],
   },
   {
     title: "Tools",
@@ -57,11 +55,10 @@ function TechIcon({ name }: { name: string }) {
   );
 }
 
-export default function SkillsPage() {
+export default function SkillsSection() {
   return (
-    <div className="bg-white dark:bg-black transition-colors duration-300 min-h-screen">
-      <Navbar />
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 pt-32 pb-20">
+    <section id="skills" className="bg-white dark:bg-black transition-colors duration-300">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
         <h1 className="text-4xl md:text-5xl font-black text-black dark:text-white transition-colors duration-300">
           My <span className="text-neon">Skills</span>
         </h1>
@@ -88,7 +85,7 @@ export default function SkillsPage() {
             </div>
           ))}
         </div>
-      </main>
-    </div>
+      </div>
+    </section>
   );
 }
