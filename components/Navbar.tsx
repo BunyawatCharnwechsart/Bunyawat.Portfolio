@@ -19,15 +19,19 @@ export default function Navbar() {
     const ids = ["about", "skills", "projects", "contact"];
 
     const onScroll = () => {
-      const pos = window.scrollY + 120;
+      const line = 120;
       let current = "";
       for (const id of ids) {
         const el = document.getElementById(id);
         if (el) {
-          const top = el.getBoundingClientRect().top + window.scrollY;
-          if (top <= pos) current = `#${id}`;
+          const top = el.getBoundingClientRect().top;
+          if (top <= line) current = `#${id}`;
         }
       }
+      const atBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 5;
+      if (atBottom) current = `#${ids[ids.length - 1]}`;
       setActive(current);
     };
 

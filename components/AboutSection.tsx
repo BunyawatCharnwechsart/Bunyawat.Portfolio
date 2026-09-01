@@ -7,7 +7,9 @@ const sections = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
       </svg>
     ),
-    items: ["สาขาวิศวกรรมซอฟต์แวร์ ชั้นปีที่ 3"],
+    heading: "มหาวิทยาลัยพะเยา",
+    description: "คณะเทคโนโลยีสารสนเทศและการสื่อสาร",
+    items: ["สาขาวิศวกรรมซอฟต์แวร์"],
   },
   {
     title: "Experience",
@@ -29,7 +31,7 @@ const sections = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    items: ["Git", "GitLab", "การพัฒนาร่วมมือ (Collaborative Development)"],
+    items: ["Git", "GitLab",  ],
   },
   {
     title: "Goals",
@@ -72,6 +74,18 @@ export default function AboutSection() {
                   {section.title}
                 </h2>
               </div>
+              {section.heading && (
+                <div className="mb-4">
+                  <h3 className="text-black dark:text-white font-semibold text-base transition-colors duration-300">
+                    {section.heading}
+                  </h3>
+                  {section.description && (
+                    <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                      {section.description}
+                    </p>
+                  )}
+                </div>
+              )}
               <ul className="space-y-3">
                 {section.items.map((item) => (
                   <li

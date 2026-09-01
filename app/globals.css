@@ -7,11 +7,15 @@ html {
   scroll-padding-top: 5rem;
 }
 
-@theme inline {
-  --color-neon: #1EF4A8;
+@theme {
+  --color-neon: #0CA678;
   --font-sans: var(--font-kanit);
   --font-mono: var(--font-geist-mono);
   --shadow-neon: 0 0 20px #1EF4A8, 0 0 40px rgba(30, 244, 168, 0.4), 0 0 60px rgba(30, 244, 168, 0.2);
+}
+
+.dark {
+  --color-neon: #1EF4A8;
 }
 
 @keyframes slide-in {
