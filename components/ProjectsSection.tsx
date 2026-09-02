@@ -2,6 +2,7 @@ type Project = {
   title: string;
   url?: string;
   demo?: string;
+  addLine ?: string;
   desc: string;
   tags: string[];
 };
@@ -10,15 +11,22 @@ const projects: Project[] = [
   {
     title: "EasyClassPay",
     url: "https://github.com/BunyawatCharnwechsart/EasyClassPay",
-    desc: "A classroom payment management system built with modern web technologies.",
+    desc: "เป็นเว็บแอปพลิเคชั่นสำหรับการหารตังค์กับเพื่อนในการใช้จ่ายต่างๆ",
     tags: ["Vue", "Node.js", "JavaScript"],
   },
   {
     title: "Easycook",
     url: "https://github.com/BunyawatCharnwechsart/Easycook",
     demo: "https://easycook-three.vercel.app/app/main",
-    desc: "A recipe discovery and meal planning platform built with Vue and TypeScript.",
+    desc: "Easy Cook เป็นแพลตฟอร์มสำหรับค้นหาและเผยแพร่สูตรอาหาร",
     tags: ["Vue", "TypeScript", "Express", "Cloudflare D1"],
+  },
+  {
+    title: "Nutri Journey (กำลังพัฒนา)",
+    url: "https://github.com/BunyawatCharnwechsart/Nutri-Journey",
+    addLine: "https://lin.ee/6rm9OFF",
+    desc:"Nutri Journey เป็นเว็บแอปพลิเคชั่นสำหรับการทำ IF ที่สามารถบันทึกการทำ IF ได้และแสดงผลการทำ IF เช่น สถิติการทำ IF รวมถึงมีระบบการแจ้งเตือนการ Line ",
+    tags: ["Next.js","Tailwind CSS", "TypeScript", "Supabase",],
   },
 ];
 
@@ -61,6 +69,18 @@ export default function ProjectsSection() {
                     Link Demo
                   </a>
                 )}
+                {
+                  p.addLine && (
+                    <a
+                      href={p.addLine}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-2 text-sm font-bold text-gray-500 dark:text-gray-400 hover:text-neon transition-colors duration-200"
+                    >
+                      Add Line
+                    </a>
+                  )
+                }
               </h2>
               <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 flex-1">
                 {p.desc}

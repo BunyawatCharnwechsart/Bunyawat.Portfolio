@@ -55,9 +55,10 @@ export default function AboutSection() {
         <h1 className="text-4xl md:text-5xl font-black text-black dark:text-white transition-colors duration-300">
           About <span className="text-neon">Me</span>
         </h1>
-        <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-xl leading-relaxed">
-          นักศึกษาสาขาวิศวกรรมซอฟต์แวร์ ชั้นปีที่ 3 ที่มีความหลงใหลในการพัฒนาเว็บแอปพลิเคชันแบบ Full-Stack
-          และกำลังมองหาโอกาสฝึกงานเพื่อสั่งสมประสบการณ์จริง
+        <p className="mt-4 text-gray-500 dark:text-gray-400 leading-relaxed">
+          สวัสดีครับผมม่อน นายบุณยวัจน์ ชาญเวชศาสตร์ เป็นนักศึกษาสาขาวิศวกรรมซอฟต์แวร์ ชั้นปีที่ 3 <br />
+          ที่มีความสนใจในการพัฒนาเว็บแอปพลิเคชันแบบ Full-Stack และสามารถพัฒนาเว็บแอปพลิเคชันโดยใช้ AI Agent ได้
+          กำลังมองหาโอกาสฝึกงานเพื่อสั่งสมประสบการณ์จริง
         </p>
 
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
