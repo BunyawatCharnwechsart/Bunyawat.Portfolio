@@ -34,10 +34,10 @@ export default function HeroSection() {
 
           <h1 className="flex flex-col">
             <span className="text-[11vw] sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-black uppercase leading-none tracking-tight text-black dark:text-white transition-colors duration-300">
-              FULL STACK
+              SOFTWARE
             </span>
             <span className="text-[11vw] sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-black uppercase leading-none tracking-tight text-black dark:text-white transition-colors duration-300">
-              WEB DEVELOPER
+              ENGINEERING
             </span>
           </h1>
 

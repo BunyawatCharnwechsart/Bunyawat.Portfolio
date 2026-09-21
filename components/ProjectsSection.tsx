@@ -12,21 +12,21 @@ const projects: Project[] = [
     title: "EasyClassPay",
     url: "https://github.com/BunyawatCharnwechsart/EasyClassPay",
     desc: "เป็นเว็บแอปพลิเคชั่นสำหรับการหารตังค์กับเพื่อนในการใช้จ่ายต่างๆ",
-    tags: ["Vue", "Node.js", "JavaScript"],
+    tags: ["Vue", "Node.js", "JavaScript", "SQL"],
   },
   {
     title: "Easycook",
     url: "https://github.com/BunyawatCharnwechsart/Easycook",
     demo: "https://easycook-three.vercel.app/app/main",
     desc: "Easy Cook เป็นแพลตฟอร์มสำหรับค้นหาและเผยแพร่สูตรอาหาร",
-    tags: ["Vue", "TypeScript", "Express", "Cloudflare D1"],
+    tags: ["Vue", "TypeScript", "Express", "Cloudflare D1", "SQL"],
   },
   {
     title: "Nutri Journey (กำลังพัฒนา)",
     url: "https://github.com/BunyawatCharnwechsart/Nutri-Journey",
     addLine: "https://lin.ee/6rm9OFF",
     desc:"Nutri Journey เป็นเว็บแอปพลิเคชั่นสำหรับการทำ IF ที่สามารถบันทึกการทำ IF ได้และแสดงผลการทำ IF เช่น สถิติการทำ IF รวมถึงมีระบบการแจ้งเตือนการ Line ",
-    tags: ["Next.js","Tailwind CSS", "TypeScript", "Supabase",],
+    tags: ["Next.js","Tailwind CSS", "TypeScript", "Supabase", "PostgreSQL"],
   },
 ];
 

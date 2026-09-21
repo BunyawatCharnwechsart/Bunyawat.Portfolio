@@ -1,7 +1,7 @@
 const skillCategories = [
   {
     title: "Languages",
-    items: ["Java", "TypeScript", "Python"],
+    items: ["Java", "TypeScript", "Python","SQL"],
   },
   {
     title: "Frontend",
@@ -38,6 +38,7 @@ const iconPaths: Record<string, string> = {
   "VS Code": "/icons/vscode-svgrepo-com.svg",
   Postman: "/icons/postman-svgrepo-com.svg",
   Java: "/icons/java-svgrepo-com.svg",
+  SQL: "/icons/sql-svgrepo-com.svg",
 };
 
 function TechIcon({ name }: { name: string }) {
