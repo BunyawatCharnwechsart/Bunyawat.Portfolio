@@ -71,7 +71,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2 sm:gap-4">
             <ThemeToggle />
             <a
-              href="/CV/CV.png"
+              href="/CV/resume_bunyawat.pdf"
               download
               className="text-sm font-medium text-black dark:text-white border border-black/20 dark:border-white/20 rounded-full px-3 sm:px-5 py-2 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200"
             >
