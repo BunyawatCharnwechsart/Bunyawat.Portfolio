@@ -1,4 +1,22 @@
+"use client";
+
+import { useState } from "react";
+
+const PHONE = "0994768995";
+
 export default function ContactSection() {
+  const [copied, setCopied] = useState(false);
+
+  const copyPhone = async () => {
+    try {
+      await navigator.clipboard.writeText(PHONE);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
+  };
+
   return (
     <section id="contact" className="bg-white dark:bg-black transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20 pb-40">
@@ -61,6 +79,41 @@ export default function ContactSection() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
+          </div>
+
+          {/* Phone */}
+          <div className="rounded-xl border border-black/10 dark:border-white/10 p-6 bg-gray-50 dark:bg-white/5 transition-colors duration-300 flex flex-col items-center text-center">
+            <svg viewBox="0 0 24 24" className="w-12 h-12 mb-4 shrink-0">
+              <rect width="24" height="24" rx="4" fill="#22c55e" />
+              <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.85 21 3 13.15 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z" fill="#fff" />
+            </svg>
+            <h2 className="text-lg font-bold text-black dark:text-white transition-colors duration-300">
+              Phone
+            </h2>
+            <p className="mt-1 text-sm text-gray-500 dark:text-gray-400 break-all">
+              {PHONE}
+            </p>
+            <button
+              onClick={copyPhone}
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold bg-neon text-black px-5 py-2 rounded-full hover:brightness-110 transition-all duration-300 cursor-pointer"
+            >
+              {copied ? (
+                <>
+                  Copied!
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </>
+              ) : (
+                <>
+                  Copy Number
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                    <rect x="9" y="9" width="13" height="13" rx="2" />
+                    <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                  </svg>
+                </>
+              )}
+            </button>
           </div>
         </div>
       </div>
